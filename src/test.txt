@@ -1,1 +1,5 @@
 struct a;
+struct b;
+struct c;
+struct d;
+struct e;

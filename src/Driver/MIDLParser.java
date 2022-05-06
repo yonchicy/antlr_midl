@@ -1,9 +1,13 @@
-package Driver;// Generated from MIDL.g4 by ANTLR 4.10.1
+package Driver;
+// Generated from MIDL.g4 by ANTLR 4.10.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class MIDLParser extends Parser {
@@ -94,7 +98,7 @@ public class MIDLParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Driver/MIDL.g4"; }
+	public String getGrammarFileName() { return "MIDL.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -1546,6 +1550,7 @@ public class MIDLParser extends Parser {
 	}
 
 	public static class Shift_exprContext extends ParserRuleContext {
+		public Token op;
 		public List<Add_exprContext> add_expr() {
 			return getRuleContexts(Add_exprContext.class);
 		}
@@ -1579,9 +1584,10 @@ public class MIDLParser extends Parser {
 				{
 				{
 				setState(218);
+				((Shift_exprContext)_localctx).op = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==T__30 || _la==T__31) ) {
-				_errHandler.recoverInline(this);
+					((Shift_exprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 				}
 				else {
 					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
@@ -1610,6 +1616,7 @@ public class MIDLParser extends Parser {
 	}
 
 	public static class Add_exprContext extends ParserRuleContext {
+		public Token op;
 		public List<Mult_exprContext> mult_expr() {
 			return getRuleContexts(Mult_exprContext.class);
 		}
@@ -1643,9 +1650,10 @@ public class MIDLParser extends Parser {
 				{
 				{
 				setState(226);
+				((Add_exprContext)_localctx).op = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==T__32 || _la==T__33) ) {
-				_errHandler.recoverInline(this);
+					((Add_exprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 				}
 				else {
 					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
@@ -1674,6 +1682,7 @@ public class MIDLParser extends Parser {
 	}
 
 	public static class Mult_exprContext extends ParserRuleContext {
+		public Token op;
 		public List<Unary_exprContext> unary_expr() {
 			return getRuleContexts(Unary_exprContext.class);
 		}
@@ -1707,9 +1716,10 @@ public class MIDLParser extends Parser {
 				{
 				{
 				setState(234);
+				((Mult_exprContext)_localctx).op = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__34) | (1L << T__35) | (1L << T__36))) != 0)) ) {
-				_errHandler.recoverInline(this);
+					((Mult_exprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 				}
 				else {
 					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
@@ -1738,6 +1748,7 @@ public class MIDLParser extends Parser {
 	}
 
 	public static class Unary_exprContext extends ParserRuleContext {
+		public Token op;
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class,0);
 		}
@@ -1765,9 +1776,10 @@ public class MIDLParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__32) | (1L << T__33) | (1L << T__37))) != 0)) {
 				{
 				setState(241);
+				((Unary_exprContext)_localctx).op = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__32) | (1L << T__33) | (1L << T__37))) != 0)) ) {
-				_errHandler.recoverInline(this);
+					((Unary_exprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 				}
 				else {
 					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;

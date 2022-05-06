@@ -1,0 +1,27 @@
+SpecificationNode
+ -DefinitionNode
+   -module (test)
+     -DefinitionNode
+       -struct (name)
+     -DefinitionNode
+       -module (kk)
+         -DefinitionNode
+           -struct (other)
+ -DefinitionNode
+   -     -struct_type (construct)
+       -member_list
+         -type_spec
+           -base_type_spec (char)
+         -declarators
+           -declarator
+             -simple_declarator (a)
+               -or_expr_node 
+                 -xor_expr_node
+                   -and_expr_node
+                     -shift_expr_node
+                       -add_expr_node
+                         -mult_expr_node
+                           -unary_expr_node
+                             --
+                             -literal_node
+                               -1

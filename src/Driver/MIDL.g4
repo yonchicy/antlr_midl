@@ -49,10 +49,10 @@ exp_list : '[' or_expr ( ','or_expr )* ']' ;
 or_expr : xor_expr ('|' xor_expr)* ;
 xor_expr : and_expr ('^' and_expr)* ;
 and_expr : shift_expr ('&'shift_expr)* ;
-shift_expr : add_expr ( ('>>' | '<<') add_expr )* ;
-add_expr : mult_expr ( ('+' | '-') mult_expr )* ;
-mult_expr : unary_expr ( ('*' |'/'|'%') unary_expr )* ;
-unary_expr : ('-'| '+' | '~')? literal ;
+shift_expr : add_expr ( op=('>>' | '<<') add_expr )* ;
+add_expr : mult_expr ( op=('+' | '-') mult_expr )* ;
+mult_expr : unary_expr ( op=('*' |'/'|'%') unary_expr )* ;
+unary_expr : op=('-'| '+' | '~')? literal ;
 literal : INTEGER
         | FLOATING_PT
         | CHAR
