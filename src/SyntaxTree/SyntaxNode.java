@@ -1,6 +1,7 @@
 package SyntaxTree;
 import  Visitor.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SyntaxNode {
@@ -10,18 +11,15 @@ public class SyntaxNode {
         }
     }
     public static class SpecificationNode extends BaseNode{
-        List<DefinitionNode> definitions;
+        public ArrayList<DefinitionNode> definitions;
     };
     public static class DefinitionNode extends BaseNode{
-        TypeDeclNode type;
-        ModuleNode  module;
+        public TypeDeclNode type;
+        public ModuleNode  module;
     };
     public static class ModuleNode extends BaseNode{};
     public static class TypeDeclNode extends BaseNode{
-        StructIDTypeNode stuct_id;
-    };
-    public static class StructIDTypeNode extends  BaseNode{
-        String id;
+        public String id;
     };
 
 
